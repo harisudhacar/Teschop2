@@ -1,0 +1,7 @@
+S.No	Env	SQL Instance	DB Name
+1	Dev	USDTTDEV0371,4646	mycmtdevdb
+2	Int	USDTTDEV0371,4646	mycmtintdb
+3	QA	FAAME0326,1433	mycmtqadb
+v
+
+https://berkenbile.wordpress.com/2013/05/03/using-powershell-to-find-blocked-blocking-sql-processes/----ps for sql blocking
