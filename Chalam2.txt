@@ -1,0 +1,41 @@
+ ##$server = Get-content "c:\myflder\servers.txt"
+
+
+Function Remoteservice($server)
+    {
+      ##$output = Invoke-command -computername $server -scriptblock{
+      ##$$$services = Get-Service qlik*|select -property Name,starttype
+
+     ##foreach ($service in $services)
+
+       ##If ($service.Starttype -ne "Disabled")
+
+
+       If ((get-service webclient).starttype -ne 'Disabled')
+	    {
+             $FailSrv = @()  
+             Try {        
+                   Restart-Service -DisplayName $service
+                   Start-Sleep -seconds 10	
+                 }
+
+             Catch
+
+                {
+                  $FailSrv = $service
+
+                }
+                  Return $FailSrv 
+              }
+
+             }
+             
+ 
+
+ $serverss = Get-content "c:\myflder\servers.txt"
+
+ Foreach($Server in $Serverss)
+ {
+
+ Function Remoteservice($server)
+ }
